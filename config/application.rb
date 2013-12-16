@@ -14,8 +14,11 @@ Bundler.require(:default, Rails.env)
 
 module GrepDev
   class Application < Rails::Application
-Mongoid.load!(Rails.root.to_s+"/config/mongoid.yml")
-    # Settings in config/environments/* take precedence over those specified here.
+    Mongoid.load!(Rails.root.to_s+"/config/mongoid.yml")
+    config.generators do |g|
+      g.orm :active_record
+    end
+# Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
