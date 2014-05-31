@@ -1,0 +1,9 @@
+.span4
+.span4
+  %h2.form-signin-heading Create User
+  = form_for User.new, :class => "form-signin" do |f|
+    = f.text_field :first_name, :class => "input-block-level"
+    = f.text_field :last_name, :class => "input-block-level"
+    = f.text_field :age, :class => "input-block-level"
+    = f.text_field :location, :class => "input-block-level"
+    = f.submit :class => "button btn btn-large btn-primary"
